@@ -1,19 +1,7 @@
 // Preset values
 const FROGS = 3;
-
-const track = document.getElementById('track');
-
 // Exercise 2.1
-for (let laneCount = 1; laneCount <= FROGS; laneCount++) {
-    let lane = document.createElement('li');
-    track.appendChild(lane);
-    
-    let number = document.createElement('span');
-    number.innerText = laneCount;
-    lane.appendChild(number);
-    
-    lane.id = `frog-${laneCount}`;
-}
+
 
 // Exercise 2.2
 // 3. Define array

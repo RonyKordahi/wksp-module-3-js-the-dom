@@ -8,3 +8,12 @@ const FROGS = 3;
     // 3. Create span and add it to the li
 
     // 4. Assign an id to each lane
+
+    for (let i = 1; i <= FROGS  ; ++i) {
+        let lane = document.createElement("li");
+        let spanLane = document.createElement("span");
+        spanLane.innerText = `lane-${i}`;
+        lane.id = i;
+        lane.appendChild(spanLane);
+        document.getElementById("track").appendChild(lane);
+    }

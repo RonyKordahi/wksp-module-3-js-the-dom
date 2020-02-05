@@ -6,7 +6,10 @@
 
 ```js
 // Example
-
+//takes a function as a paramater and a number
+setTimeout(function() {
+    console.log("HELLO");
+}, 3000); //unit is miliseconds
 ```
 
 ---
@@ -15,7 +18,9 @@
 
 ```js
 // Example
-
+setInterval(function() {
+    console.log("here!");
+}, 3000);
 ```
 
 ---
@@ -26,7 +31,11 @@ This will require the `setInterval` to be declared.
 
 ```js
 // Example
+const myTimer = setInterval(function() {
+    console.log("here!");
+}, 3000);
 
+clearInterval(myTimer);
 ```
 
 ---
