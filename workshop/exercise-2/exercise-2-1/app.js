@@ -13,7 +13,7 @@ const FROGS = 3;
         let lane = document.createElement("li");
         let spanLane = document.createElement("span");
         spanLane.innerText = `lane-${i}`;
-        lane.id = i;
+        lane.id = `lane-${i}`;
         lane.appendChild(spanLane);
         document.getElementById("track").appendChild(lane);
     }
