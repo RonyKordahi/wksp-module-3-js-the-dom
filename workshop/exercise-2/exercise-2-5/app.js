@@ -38,3 +38,35 @@ for (let i = 0; i < racers.length; ++i) {
     frogInfo.classList.add("frog");
     frogInfo.style.backgroundColor = `${racers[i].color}`;
 }
+
+racers.forEach(function(frogMove) {
+    racingFrog(frogMove);
+});
+
+let rankingArray = [];
+
+function racingFrog(frogMove) {
+    let distance = frogMove.progress;
+
+    const movement = setInterval(function() {
+        distance += Math.random() * 20 + 1;
+
+        if (distance > 100) {
+            clearInterval(movement);
+            console.log(`${frogMove.name} finished the race!`);
+            rankingArray.push(frogMove.name);
+        }
+
+        document.querySelector(`#${frogMove.lane} .frog`).style.left = `${distance}%`;
+    }, Math.random() * 1000);
+}
+
+const winners = setTimeout(function() {
+    displayRanks();
+}, 10000);
+
+function displayRanks() {
+    console.log(`First place: ${rankingArray[0]}`);
+    console.log(`Second place: ${rankingArray[1]}`);
+    console.log(`Third place: ${rankingArray[2]}`);
+}

@@ -38,3 +38,22 @@ for (let i = 0; i < racers.length; ++i) {
     frogInfo.classList.add("frog");
     frogInfo.style.backgroundColor = `${racers[i].color}`;
 }
+
+racers.forEach(function(frogMove) {
+    racingFrog(frogMove);
+});
+
+function racingFrog(frogMove) {
+    let distance = frogMove.progress;
+
+    const movement = setInterval(function() {
+        distance += Math.random() * 20 + 1;
+
+        if (distance > 100) {
+            clearInterval(movement);
+            console.log(`${frogMove.name} finished the race!`);
+        }
+
+        document.querySelector(`#${frogMove.lane} .frog`).style.left = `${distance}%`;
+    }, Math.random() * 1000);
+}
