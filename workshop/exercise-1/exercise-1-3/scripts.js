@@ -1,5 +1,3 @@
-// console.log('...crickets...');
-
 const title = document.createElement("h1");
 title.innerText = "The best How I Met Your Mother\n episode (according to fans)";
 document.getElementById("main").appendChild(title);
@@ -20,6 +18,7 @@ const picture = document.createElement("img");
 picture.setAttribute("src", "images/robin-sparkles.jpg");
 picture.setAttribute("alt", "robin");
 document.getElementById("main").appendChild(picture);
+picture.style.borderRadius = "4px";
 
 const par2 = document.createElement("p");
 par2.innerText = "In this episode, Ted is learning a few secrets about Robin, namely that she has\n an unexplained aversion to the mall. Robin refuses to tell Ted and the others\n why she won’t go to the mall, so the gang forms their own theories. Marshall\n believes it’s because she got married in a mall and is still married. Barney\n believes it has something to do with Robin having performed in a porn video.\n The two of them make a slap bet with each other: whoever is right gets to slap\n the other across the face as hard as he can. Lily is named the Slap Bet\n Commissioner, as long as she promises to be unbiased.";
@@ -34,7 +33,13 @@ source.innerText = "Source";
 source.setAttribute("href", "https://himym2017.wordpress.com/2017/03/25/the-best-himym-episode-according-to-fans/");
 document.getElementById("main").appendChild(source);
 
-const looks = document.createElement("link");
-looks.setAttribute("rel", "stylesheet");
-looks.setAttribute("href", "./styles.css");
-document.querySelector("head").appendChild(looks);
+
+document.body.style.backgroundImage = "url('./images/yellow-umbrella.jpg')";
+const box = document.getElementById("main");
+box.style.backgroundColor = "white";
+box.style.width = "630px";
+box.style.borderRadius = "4px";
+box.style.paddingLeft = "30px";
+document.body.style.fontFamily = "Playfair Display, sans-serif";
+title.style.textAlign = "center";
+source.setAttribute("style", "text-decoration:none");

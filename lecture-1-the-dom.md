@@ -87,7 +87,9 @@ Instead, we will use these methods
 
 ```js
 // Example
-
+document.getElementByID('my-div'); //doesn't need hashtag
+document.querySelector('body');
+document.querySelector('#my-div'); //needs hashtag
 ```
 
 ---
@@ -100,12 +102,13 @@ Instead, we will use these methods
 
 You can modify the content of a leaf, an end node with 
 
-- [`.innerText()`](https://www.w3schools.com/jsref/prop_node_innertext.asp)
-- [`.innerHTML()`](https://www.w3schools.com/jsref/prop_html_innerhtml.asp) 
+- [`.innerText`](https://www.w3schools.com/jsref/prop_node_innertext.asp)
+- [`.innerHTML`](https://www.w3schools.com/jsref/prop_html_innerhtml.asp) 
 
 ```js
 // Example
-
+const myTitle = document.getElementByID("my-title");
+myTitle.innerText = "New title";
 ```
 
 ---
@@ -127,7 +130,9 @@ To add a new node to an HTML page, you need to do it in 3 steps.
 
 ```js
 // Example
-
+const paragraph = document.createElement("p");
+paragraph.innterText = "new hacker right here";
+document.querySelector("body").appendChild(paragraph);
 ```
 
 ---
@@ -152,6 +157,7 @@ We can style elements from JavaScript.
 const myDiv = document.getElementById('my-div');
 
 myDiv.style.background = "purple";
+myDiv.style.borderRadius = "23px"; //for CSS comands that use dashes, it must be camel cased in JS
 ```
 
 ⚠️ Houston. We have a problem!
